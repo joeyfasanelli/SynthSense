@@ -23,6 +23,8 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 
+app.set('view engine', 'ejs')
+
 app.use(session({
     secret: uuidv4(),
     resave: false,
@@ -32,12 +34,8 @@ app.use(session({
 app.use('/route', router);
 
 app.get('/', (req,res) => {
-    res.render('index.ejs')
+    res.render('login.ejs')
 });
-
-
-
-
 
 
 // Listener
