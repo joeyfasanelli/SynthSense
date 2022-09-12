@@ -16,6 +16,16 @@
             <a class="link" href="/">Logout</a>
         </li>
     </ul>
+    <main>
+        <h2>Track List</h2>
+        <ul>
+            <% for (let i = 0; i < tracks.length; i++) { %>
+            <li>
+                <a href="tracks/<%= tracks[i]._id %>"><%= tracks[i].name %></a>
+            </li>
+            <% } %>
+        </ul>
+    </main>
     
 </body>
 </html>

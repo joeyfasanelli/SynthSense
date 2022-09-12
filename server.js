@@ -19,9 +19,6 @@ app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 app.use('/tracks', tracksController)
 
-app.get('/', (req,res) => {
-    res.render('home.ejs')
-})
 
 
 
