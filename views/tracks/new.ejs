@@ -16,6 +16,17 @@
             <a class="link" href="/">Logout</a>
         </li>
     </ul>
+    <h1>Add New Track</h1>
+
+    <div class="form">
+        <form action="/tracks" method="POST">
+            Name: <input type="text" placeholder="Track Name" name="name"></br>
+            Artist: <input type="text" placeholder="Artist" name="artist"></br>
+            Link: <input type="text" placeholder="Link" name="link"></br>
+        </br>
+            <input class="add" type="submit" value="Add to Track List">
+        </form>
+        </div>
     
 </body>
 </html>
@@ -49,7 +60,6 @@
     .navbar {
         padding: 18px 0px 18px 0px;
         
-        
     }
 
     .link {
@@ -61,11 +71,41 @@
         font-family:'Montserrat', sans-serif;
         padding: 0px 20px 0px 20px;
         
-        
-        
     }
 
     .link:hover {
         color: #dadada;
     }
+
+    .form {
+            color: rgb(255, 255, 255);
+            font-family:'Montserrat', sans-serif;
+            left: 45%;
+            right: 50%;
+            position: absolute;
+
+        }
+
+    .add {
+            width: 130px;
+            height: 40px;
+            border-color:  #303030;
+            border-width: medium;
+            border-style: solid;
+            border-radius: 50px;
+            background-color: #303030;
+            color: white;
+            margin: 20px 0px 0px 0px;
+    }
+
+    .add:hover {
+            background-color: #252525;
+            cursor: pointer;
+        }
+
+        .add:active {
+            background-color: #424242;
+            transform: translateY(2px);
+
+        }
 </style>
