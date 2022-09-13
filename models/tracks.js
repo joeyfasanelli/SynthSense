@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const trackSchema = new Schema({
     name: String,
     artist: String,
+    album: String,
     link: String,
 }, {
     timestamps: true
