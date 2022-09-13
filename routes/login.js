@@ -7,26 +7,26 @@ const credential = {
 }
 
 //User Login
-router.post("/login", (req, res) => {
+router.post("/", (req, res) => {
     if(req.body.email == credential.email && req.body.password == credential.password){
         req.session.user = req.body.email;
-        res.redirect('/route/home')
+        res.redirect('/tracks')
     }else{
         res.end("Invalid Username or Password");
     }
 });
 
 //Route for Home
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
     if(req.session.user) {
-        res.render('home', {user: req.session.user})
+        res.render('index', {user: req.session.user})
     } else {
         res.end("Unauthorized User")
     }
 });
 
 //User Logout
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
     req.session.destroy(function(err){
         if(err){
             res.send("Error")
