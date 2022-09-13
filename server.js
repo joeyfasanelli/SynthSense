@@ -4,6 +4,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const tracksController = require('./controllers/tracks')
 const methodOverride = require('method-override');
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.DATABASE_URL)
 
@@ -18,6 +19,20 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 app.use('/tracks', tracksController)
+
+app.listen(3000, () => {
+    console.log(`Server is listening on port 3000`)
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +81,3 @@ app.use('/tracks', tracksController)
 
 
 // Listener
-app.listen(3000, () => {
-    console.log(`Server is listening on port 3000`)
-})

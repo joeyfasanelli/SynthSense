@@ -20,9 +20,9 @@
 		<h1>Edit Track</h1>
         <div class="form">
 		<form action="/tracks/<%=track._id%>?_method=PUT" method="POST">
-            Name: <input type="text" placeholder="Track Name" name="name"></br>
-            Artist: <input type="text" placeholder="Artist" name="artist"></br>
-            Link: <input type="text" placeholder="Link" name="link"></br>
+            Name: <input type="text" placeholder="Track Name" name="name" value="<%=track.name%>"></br>
+            Artist: <input type="text" placeholder="Artist" name="artist" value="<%=track.artist%>"></br>
+            Link: <input type="text" placeholder="Link" name="link" value="<%=track.link%>"></br>
 			<input class="edit" type="submit" name="" value="Submit Changes"  />
 		</form>
         </div>

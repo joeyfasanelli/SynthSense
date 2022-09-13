@@ -23,7 +23,7 @@
         <ul class="track">
             <% for (let i = 0; i < tracks.length; i++) { %>
             <li>
-                <a class="track" href="tracks/<%= tracks[i]._id %>"><%= tracks[i].name %></a>
+                <a class="track" href="tracks/<%= tracks[i]._id %>"><%= tracks[i].name %> - (<%=tracks[i].artist%>)</a>
             </li>
             <% } %>
         </ul>
@@ -50,7 +50,7 @@
     .container {
         background-color: rgba(0, 0, 0, 0.7);
         height: 350px;
-        width: 300px;
+        width: 400px;
         margin: auto;
 
         

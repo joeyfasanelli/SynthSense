@@ -19,9 +19,9 @@
         </ul>
      <div class="track">
 		<h2><%=track.name%></h2>
-		Artist: <%=track.artist%>
+		Artist:  <%=track.artist%>
 		<br />
-		Link: <%=track.link%>
+		<a href="<%=track.link%>"><%=track.link%></a>
         <br />
         <%=track.img%>
         <form style="display:inline;" action="/tracks/<%=track._id%>?_method=DELETE" method="POST">
