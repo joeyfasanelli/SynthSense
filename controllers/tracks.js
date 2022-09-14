@@ -1,6 +1,15 @@
 const express = require('express')
 const Track = require('../models/tracks')
 const router = express.Router()
+const trackSeed = require('../models/trackSeed.js');
+
+router.get('/seed', (req, res) => {
+    Track.deleteMany({}, (error, allTracks) => {});
+            
+        Track.create(trackSeed, (error, data) => {
+            res.redirect('/tracks');
+                });
+            });
 
 //I
 router.get('/', (req,res) => {
