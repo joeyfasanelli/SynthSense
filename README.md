@@ -9,6 +9,9 @@
 * EJS
 * Node.js
 * Express
+* Mongoose
+* MongoDB
+* Bootstrap
 
 
 ## Screenshots
